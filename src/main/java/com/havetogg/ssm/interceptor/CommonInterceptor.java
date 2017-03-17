@@ -1,5 +1,6 @@
 package com.havetogg.ssm.interceptor;
 
+import com.havetogg.ssm.model.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.ModelAndView;
@@ -49,8 +50,8 @@ public class CommonInterceptor extends HandlerInterceptorAdapter {
         log.info("contextPath:"+contextPath);
         log.info("url:"+url);
 
-        String username =  (String)request.getSession().getAttribute("user");
-        if(username == null){
+        User user =  (User)request.getSession().getAttribute("user");
+        if(user == null){
             log.info("Interceptor：跳转到login页面！");
             request.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(request, response);
             return false;

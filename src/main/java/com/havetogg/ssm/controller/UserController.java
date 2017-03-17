@@ -51,7 +51,7 @@ public class UserController {
         List<User> userList = userService.getAllUser();
         for(User user:userList){
             if(name.equals(user.getUserName())&&pwd.equals(user.getUserPwd())){
-                model.addAttribute("user",name);
+                model.addAttribute("user",user);
                 return "forward:/user/showUser";
             }else{
                 model.addAttribute("errorTimes", errorTimes+1);
@@ -63,7 +63,7 @@ public class UserController {
     }
 
     @RequestMapping("/logout")
-    public String logout(@ModelAttribute("user") String user, SessionStatus sessionStatus){
+    public String logout(@ModelAttribute("user") User user, SessionStatus sessionStatus){
         //@ModelAttribute("User")相当于将session中名为"User"的对象注入user对象中
         //sessionStatus中的setComplete方法可以将session中的内容全部清空
         sessionStatus.setComplete();
