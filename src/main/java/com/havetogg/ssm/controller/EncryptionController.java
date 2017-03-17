@@ -3,6 +3,7 @@ package com.havetogg.ssm.controller;
 import com.havetogg.ssm.model.User;
 import com.havetogg.ssm.result.CommonResult;
 import com.havetogg.ssm.utils.ShaUtil;
+import com.havetogg.ssm.utils.StringUtil;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -42,8 +43,10 @@ public class EncryptionController {
         String sortString = strings[0]+strings[1];
         String shaString = ShaUtil.getSha1(sortString);
         if(sha.equals(shaString)){
+            String assessToken = StringUtil.getRandomString(8);
 
         }
         return null;
     }
+
 }
