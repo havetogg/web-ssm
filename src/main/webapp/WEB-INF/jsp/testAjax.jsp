@@ -11,7 +11,7 @@
 <html>
 <head>
     <title>TestAjax</title>
-    <script type="text/javascript" src="../statics/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/statics/js/jquery-3.2.0.min.js"></script>
     <script>
         alert(1);
         $(function(){

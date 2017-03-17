@@ -56,8 +56,7 @@
     <mvc:interceptors>
         <mvc:interceptor>
             <!-- 匹配的是url路径， 如果不配置或/**,将拦截所有的Controller -->
-            <mvc:mapping path="/user/**" />
-            <mvc:mapping path="/upload/**" />
+            <mvc:mapping path="/**" />
             <mvc:exclude-mapping path="/user/login"/>
             <mvc:exclude-mapping path="/user/captcha"/>
             <mvc:exclude-mapping path="/user/captchaTest"/>

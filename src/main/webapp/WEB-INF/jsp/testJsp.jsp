@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Title</title>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/statics/js/jquery-3.1.1.min.js"/>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/statics/js/jquery-3.2.0.min.js"/>
     <script>
         alert(1);
         $(function(){console.log(123);});
