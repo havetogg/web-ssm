@@ -1,8 +1,14 @@
 package com.havetogg.ssm.model;
 
+import com.havetogg.ssm.model.base.BaseEntity;
+
 import java.util.Date;
 
-public class User extends BaseEntity{
+/**
+ * Created by admin on 2017/3/16.
+ * 用户类
+ */
+public class User extends BaseEntity {
 
     private Long id;
     private String userName;
