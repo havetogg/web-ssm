@@ -25,9 +25,11 @@ public class AccessTokenServieImpl implements AccessTokenService{
         return accessTokenDao.getAccessTokenByUid(uid);
     }
 
+    //检验accessToken是否有效
     @Override
     public boolean idExpire(String uid) {
         Date createDate = accessTokenDao.getCreateDateByUid(uid);
+        if(createDate==null) return true;
         long interval = new Date().getTime()-createDate.getTime();
         long twoHours = 2*60*60*1000;
         if(interval<twoHours){

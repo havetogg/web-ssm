@@ -12,7 +12,7 @@ public class AccessToken extends BaseEntity{
     private long id;
     private long userId;
     private String accessToken;
-    private Date creatTime;
+    private Date createTime;
 
     public long getId() {
         return id;
@@ -38,11 +38,11 @@ public class AccessToken extends BaseEntity{
         this.accessToken = accessToken;
     }
 
-    public Date getCreatTime() {
-        return creatTime;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreatTime(Date creatTime) {
-        this.creatTime = creatTime;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }
